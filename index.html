@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Stopwatch</title>
+  </head>
+  <body class="bg-red-300 min-h-screen">
+    <main>
+      <h1 class="text-5xl font-bold text-center p-4">Stopwatch</h1>
+
+      <div class="flex gap-4 justify-center py-10">
+        <button
+          onclick="btnStart()"
+          class="px-6 py-2 rounded-md text-2xl font-medium bg-green-500 text-white cursor-pointer"
+        >
+          Start
+        </button>
+
+        <button
+          onclick="btnStop()"
+          class="px-6 py-2 rounded-md text-2xl font-medium bg-blue-500 text-white cursor-pointer"
+        >
+          Stop
+        </button>
+
+        <button
+          onclick="btnReset()"
+          class="px-6 py-2 rounded-md text-2xl font-medium bg-gray-700 text-white cursor-pointer"
+        >
+          Reset
+        </button>
+      </div>
+
+      <div id="time" class="bg-red-100 p-4 text-center text-5xl font-mono">
+        Time: 0.00 s
+      </div>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
