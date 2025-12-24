@@ -6,35 +6,45 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Stopwatch</title>
   </head>
-  <body class="bg-red-300 min-h-screen">
-    <main>
-      <h1 class="text-5xl font-bold text-center p-4">Stopwatch</h1>
 
-      <div class="flex gap-4 justify-center py-10">
+  <body
+    class="min-h-screen bg-gradient-to-br from-zinc-900 via-slate-900 to-black flex items-center justify-center"
+  >
+    <main
+      class="w-full max-w-md bg-white/10 backdrop-blur-xl rounded-3xl shadow-2xl p-4 m-4 text-white"
+    >
+      <!-- Title -->
+      <h1 class="text-4xl font-semibold text-center tracking-wide mb-8">
+        Stopwatch
+      </h1>
+
+      <!-- Time Display -->
+      <div id="time" class="text-center text-3xl font-mono font-bold mb-10">
+        0.00
+      </div>
+
+      <!-- Buttons -->
+      <div class="flex justify-center gap-4">
         <button
           onclick="btnStart()"
-          class="px-6 py-2 rounded-md text-2xl font-medium bg-green-500 text-white cursor-pointer"
+          class="px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 active:scale-95 transition font-semibold"
         >
           Start
         </button>
 
         <button
           onclick="btnStop()"
-          class="px-6 py-2 rounded-md text-2xl font-medium bg-blue-500 text-white cursor-pointer"
+          class="px-6 py-3 rounded-xl bg-sky-500 hover:bg-sky-600 active:scale-95 transition font-semibold"
         >
           Stop
         </button>
 
         <button
           onclick="btnReset()"
-          class="px-6 py-2 rounded-md text-2xl font-medium bg-gray-700 text-white cursor-pointer"
+          class="px-6 py-3 rounded-xl bg-zinc-600 hover:bg-zinc-700 active:scale-95 transition font-semibold"
         >
           Reset
         </button>
-      </div>
-
-      <div id="time" class="bg-red-100 p-4 text-center text-5xl font-mono">
-        Time: 0.00 s
       </div>
     </main>
 
